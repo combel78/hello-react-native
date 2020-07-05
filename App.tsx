@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
 
-export default function App() {
+const HelloApp: React.FunctionComponent = () => {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <View style={styles.helloBox}>
+        <Text style={styles.greetingText}>Hello React Native!</Text>
+      </View>
       <StatusBar style="auto" />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#b3c6ff",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  helloBox: {
+    backgroundColor: "#3366ff",
+    padding: 30,
+  },
+  greetingText: {
+    color: "#fff",
+    fontSize: 32,
+    fontWeight: "bold",
   },
 });
+
+export default HelloApp;
